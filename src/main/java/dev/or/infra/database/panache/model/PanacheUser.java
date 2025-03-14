@@ -1,4 +1,4 @@
-package dev.or.infra.database.panache;
+package dev.or.infra.database.panache.model;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.Column;

@@ -1,18 +1,18 @@
-package dev.or.infra.database.panache;
+package dev.or.infra.database.panache.model;
 
 import java.time.LocalDateTime;
 
 import org.hibernate.annotations.CreationTimestamp;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
@@ -52,7 +52,7 @@ public class PanacheTeacher extends PanacheEntityBase {
     private LocalDateTime createdAt;
 
     @JoinColumn(name = "ID_ADDRESS", referencedColumnName = "ID")
-    @OneToOne(fetch = FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.PERSIST)
     private PanacheAddress address;
 
     public Integer getId() {

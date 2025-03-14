@@ -3,7 +3,7 @@ package dev.or.service;
 import org.jboss.logging.Logger;
 
 import dev.or.domain.entity.dto.UserDTO;
-import dev.or.infra.database.panache.PanacheUser;
+import dev.or.infra.database.panache.model.PanacheUser;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;
