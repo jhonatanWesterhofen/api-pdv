@@ -1,7 +1,9 @@
 package dev.or.domain.entity.bo;
 
-import java.time.LocalDateTime;
-
+/**
+ *
+ * @author Jhonatan
+ */
 public class TeacherBO {
 
     private Integer id;
@@ -11,11 +13,10 @@ public class TeacherBO {
     private String nationality;
     private Integer age;
     private byte[] profileImg;
-    private LocalDateTime createdAt;
     private AddressBO address;
 
     public TeacherBO(Integer id, String name, String document, String maritalStatus, String nationality, Integer age,
-            byte[] profileImg, LocalDateTime createdAt, AddressBO address) {
+            byte[] profileImg, AddressBO address) {
         this.id = id;
         this.name = name;
         this.document = document;
@@ -23,7 +24,6 @@ public class TeacherBO {
         this.nationality = nationality;
         this.age = age;
         this.profileImg = profileImg;
-        this.createdAt = createdAt;
         this.address = address;
     }
 
@@ -53,10 +53,6 @@ public class TeacherBO {
 
     public byte[] getProfileImg() {
         return profileImg;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
     }
 
     public AddressBO getAddress() {

@@ -1,4 +1,4 @@
-package dev.or.infra.database.panache;
+package dev.or.infra.database.panache.model;
 
 import java.time.LocalDateTime;
 
