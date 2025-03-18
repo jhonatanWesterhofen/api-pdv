@@ -96,5 +96,4 @@ public class ListUtils {
         return isNotNullOrEmpty(lista) ? Collections.unmodifiableList(new ArrayList<>(lista)).stream()
                 : new ArrayList<T>().stream();
     }
-
 }
